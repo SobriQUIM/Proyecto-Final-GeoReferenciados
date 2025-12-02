@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Usuarios - Proyecto GeoReferenciados</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container row between">
+            <div class="brand"><a href="/dashboard.html">GeoRef</a> / Usuarios</div>
+            <button id="logout-btn" class="btn sm">Salir</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="title">Gestión de Usuarios</h1>
+
+        <section class="card">
+            <h3>Nuevo Vendedor</h3>
+            <form id="user-form" class="form">
+                <label class="field">
+                    <span>Nombre</span>
+                    <input id="name" type="text" required />
+                </label>
+                <label class="field">
+                    <span>Email</span>
+                    <input id="email" type="email" required />
+                </label>
+                <label class="field">
+                    <span>Contraseña</span>
+                    <input id="password" type="password" required />
+                </label>
+
+                <label class="field">
+                    <span>Asignar Tienda</span>
+                    <select id="store">
+                        <option value="">Sin tienda (o seleccionar...)</option>
+                    </select>
+                </label>
+
+                <!-- Role is hidden/fixed to 'user' (Vendor) for now, or selectable if needed -->
+                <input type="hidden" id="role" value="user" />
+
+                <button type="submit" class="btn primary">Crear Usuario</button>
+            </form>
+        </section>
+
+        <section class="mt-4">
+            <h3>Lista de Usuarios</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Rol</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-list">
+                        <!-- Rows here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="js/users.js"></script>
+</body>
+
+</html>

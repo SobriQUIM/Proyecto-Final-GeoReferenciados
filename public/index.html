@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -11,7 +12,8 @@
   <main class="container">
     <section class="card">
       <div class="logo">
-        <img src="logo-placeholder.png" alt="Logo" />
+        <!-- Placeholder for logo -->
+        <div style="width: 64px; height: 64px; background: #ddd; border-radius: 50%; margin: 0 auto;"></div>
       </div>
 
       <h1 class="title">Iniciar sesión</h1>
@@ -28,12 +30,21 @@
           <input id="password" type="password" name="password" placeholder="Contraseña" required />
         </label>
 
+        <div id="message" class="message"></div>
+
         <div class="row between">
           <label class="checkbox">
             <input type="checkbox" id="remember" />
             <span>Recordarme</span>
           </label>
-          <a class="link" href="/register.html">Crear cuenta</a>
         </div>
 
-        <button type="submit" class="btn pri
+        <button type="submit" class="btn primary">Ingresar</button>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="js/login.js"></script>
+</body>
+
+</html>

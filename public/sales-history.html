@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Historial de Ventas - Proyecto GeoReferenciados</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container row between">
+            <div class="brand"><a href="/dashboard.html">GeoRef</a> / Historial de Ventas</div>
+            <button id="logout-btn" class="btn sm">Salir</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="title">Historial de Ventas</h1>
+
+        <section class="card">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Vendedor</th>
+                            <th>Tienda</th>
+                            <th>Productos</th>
+                            <th>Total</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sales-list">
+                        <!-- Rows here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="js/sales-history.js"></script>
+</body>
+
+</html>

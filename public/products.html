@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Productos - Proyecto GeoReferenciados</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .status-dot {
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .status-green {
+            background-color: #2ecc71;
+        }
+
+        .status-yellow {
+            background-color: #f1c40f;
+        }
+
+        .status-red {
+            background-color: #e74c3c;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th,
+        td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container row between">
+            <div class="brand"><a href="/dashboard.html">GeoRef</a> / Productos</div>
+            <button id="logout-btn" class="btn sm">Salir</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="title">Gestión de Inventario</h1>
+
+        <section class="card admin-only">
+            <h3>Nuevo Producto</h3>
+            <form id="product-form" class="form">
+                <div class="row">
+                    <label class="field">
+                        <span>Nombre</span>
+                        <input id="name" type="text" required />
+                    </label>
+                    <label class="field">
+                        <span>SKU</span>
+                        <input id="sku" type="text" required />
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label class="field">
+                        <span>Precio</span>
+                        <input id="price" type="number" step="0.01" required />
+                    </label>
+                    <label class="field">
+                        <span>Tienda</span>
+                        <select id="store" required>
+                            <option value="">Seleccionar tienda...</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label class="field">
+                        <span>Stock Actual</span>
+                        <input id="stock" type="number" required />
+                    </label>
+                    <label class="field">
+                        <span>Stock Mínimo</span>
+                        <input id="minStock" type="number" value="5" required />
+                    </label>
+                    <label class="field">
+                        <span>Stock Máximo</span>
+                        <input id="maxStock" type="number" value="100" required />
+                    </label>
+                </div>
+
+                <button type="submit" class="btn primary">Guardar Producto</button>
+            </form>
+        </section>
+
+        <section class="mt-4">
+            <h3>Inventario</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Estado</th>
+                            <th>SKU</th>
+                            <th>Producto</th>
+                            <th>Tienda</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products-list">
+                        <!-- Rows here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="js/products.js"></script>
+</body>
+
+</html>

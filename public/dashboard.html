@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dashboard - Proyecto GeoReferenciados</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container row between">
+            <div class="brand">GeoRef</div>
+            <div class="user-info">
+                <span id="user-name">Usuario</span>
+                <button id="logout-btn" class="btn sm">Salir</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="title">Bienvenido</h1>
+        <p class="subtitle">Selecciona una opción para comenzar</p>
+
+        <div class="grid">
+            <!-- Admin Options -->
+            <a href="/stores.html" class="card option admin-only hidden">
+                <h3>🏪 Tiendas</h3>
+                <p>Gestionar sucursales y zonas</p>
+            </a>
+
+            <a href="/users.html" class="card option admin-only hidden">
+                <h3>👥 Usuarios</h3>
+                <p>Gestionar vendedores</p>
+            </a>
+
+            <a href="/products.html" class="card option admin-only hidden">
+                <h3>📦 Productos</h3>
+                <p>Gestionar inventario y stock</p>
+            </a>
+
+            <!-- Vendor Options -->
+            <a href="/sales.html" class="card option vendor-only hidden">
+                <h3>🛒 Nueva Venta</h3>
+                <p>Registrar ventas y ver recibos</p>
+            </a>
+
+            <a href="/sales-history.html" class="card option">
+                <h3>📜 Historial de Ventas</h3>
+                <p>Ver registro de transacciones</p>
+            </a>
+        </div>
+    </main>
+
+    <script type="module" src="js/dashboard.js"></script>
+</body>
+
+</html>
